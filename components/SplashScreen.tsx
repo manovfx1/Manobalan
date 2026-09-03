@@ -161,7 +161,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           src="/images/welcome/welcome-text.png"
           alt="Hey, welcome to my portfolio — Technical Art · 3D · Immersive · Virtual Reality · UI/UX"
           width={8192}
-          height={2552}
+          height={2252}
           priority
           sizes="(min-width: 900px) 1160px, 96vw"
           className="block h-auto w-full"

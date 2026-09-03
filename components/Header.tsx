@@ -76,14 +76,16 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-white/50 transition-colors duration-300 hover:text-white"
+            className="text-white/80 transition-colors duration-300 hover:text-white"
           >
             <LinkedInIcon />
           </a>
           <a
-            href={`mailto:${EMAIL}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}`}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Email"
-            className="text-white/50 transition-colors duration-300 hover:text-white"
+            className="text-white/80 transition-colors duration-300 hover:text-white"
           >
             <MailIcon />
           </a>

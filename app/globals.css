@@ -16,37 +16,39 @@
   --font-sans: var(--font-urbanist);
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-}
+  html,
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
 
-body {
-  background-color: var(--color-bg);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 6px 6px, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
-  color: var(--color-fg);
-  font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-}
+  body {
+    background-color: var(--color-bg);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px),
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 6px 6px, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
+    color: var(--color-fg);
+    font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
 }
 
 /* ---------- Film grain overlay ---------- */
