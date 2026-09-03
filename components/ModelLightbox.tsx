@@ -1,17 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import ModelViewer from "./ModelViewer";
 
 interface ModelLightboxProps {
-  image: string;
+  model: string;
   alt: string;
-  layoutId: string;
   onClose: () => void;
 }
 
-export default function ModelLightbox({ image, alt, layoutId, onClose }: ModelLightboxProps) {
+export default function ModelLightbox({ model, alt, onClose }: ModelLightboxProps) {
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -21,12 +19,9 @@ export default function ModelLightbox({ image, alt, layoutId, onClose }: ModelLi
   }, [onClose]);
 
   return (
-    <motion.div
+    <div
       className="fixed inset-0 z-200 flex items-center justify-center bg-black/80"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
+      style={{ animation: "backdropIn 0.3s ease-out" }}
       onClick={onClose}
     >
       <button
@@ -40,18 +35,17 @@ export default function ModelLightbox({ image, alt, layoutId, onClose }: ModelLi
         </svg>
       </button>
 
-      <motion.div
-        layoutId={layoutId}
-        className="detail-media-bg relative h-[80vmin] w-[80vmin] max-h-[85vh] max-w-[85vw] overflow-hidden"
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      <div
+        className="detail-media-bg relative h-[80vmin] w-[80vmin] max-h-[85vh] max-w-[85vw] overflow-hidden rounded-2xl"
+        style={{ animation: "modalPopIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)" }}
         onClick={(e) => e.stopPropagation()}
       >
-        <Image src={image} alt={alt} fill sizes="85vw" className="object-cover" />
-      </motion.div>
+        <ModelViewer src={model} />
+      </div>
 
       <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[12px] uppercase tracking-[1.5px] text-white/45">
         {alt}
       </p>
-    </motion.div>
+    </div>
   );
 }

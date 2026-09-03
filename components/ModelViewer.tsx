@@ -27,7 +27,10 @@ export default function ModelViewer({ src, margin = 1.2 }: { src: string; margin
       </Suspense>
       <OrbitControls
         enablePan={false}
-        enableZoom={false}
+        enableZoom
+        zoomSpeed={0.6}
+        minDistance={1.5}
+        maxDistance={12}
         minPolarAngle={Math.PI / 2}
         maxPolarAngle={Math.PI / 2}
         makeDefault

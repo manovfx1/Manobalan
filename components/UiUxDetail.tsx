@@ -90,7 +90,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       Moodboard: {
         type: "single",
         image: "/images/ui-ux/storygen/moodboard.png",
-        dims: { width: 1939, height: 1119 },
+        dims: { width: 1985, height: 1149 },
         widthPercent: 82,
         centerLine: true,
         offsetY: -110,
@@ -108,7 +108,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       Wireframes: {
         type: "single",
         image: "/images/ui-ux/storygen/wireframes.png",
-        dims: { width: 1862, height: 1743 },
+        dims: { width: 1932, height: 1818 },
         widthPercent: 82,
         centerLine: true,
         offsetY: -110,
@@ -117,7 +117,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       "UX flow": {
         type: "single",
         image: "/images/ui-ux/storygen/flow-diagram.jpg",
-        dims: { width: 6400, height: 8640 },
+        dims: { width: 16455, height: 12622 },
         widthPercent: 90,
         offsetY: -40,
       },
@@ -172,7 +172,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       "User Persona": {
         type: "single",
         image: "/images/ui-ux/routex/user-persona.png",
-        dims: { width: 1301, height: 1248 },
+        dims: { width: 4192, height: 3944 },
         offsetY: 10,
         widthPercent: 59,
         corners: true,
@@ -180,7 +180,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       "Info Architecture": {
         type: "single",
         image: "/images/ui-ux/routex/info-architecture.png",
-        dims: { width: 2096, height: 2447 },
+        dims: { width: 4192, height: 4980 },
         widthPercent: 72,
         centerLine: true,
         offsetY: 90,
@@ -198,7 +198,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       "Logo design": {
         type: "single",
         image: "/images/ui-ux/routex/logo-design.png",
-        dims: { width: 1340, height: 630 },
+        dims: { width: 4192, height: 2054 },
         widthPercent: 72,
         centerLine: true,
         offsetY: -110,
@@ -207,7 +207,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
       "Brand board": {
         type: "single",
         image: "/images/ui-ux/routex/brandboard.png",
-        dims: { width: 1396, height: 1438 },
+        dims: { width: 4192, height: 3944 },
         widthPercent: 73,
         centerLine: true,
         offsetY: -110,
@@ -376,10 +376,13 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
 
               {content.type === "text" && content.text && (
                 <div
-                  className="flex items-center"
-                  style={{ height: "calc(100vh - var(--header-height) - 6rem)", marginLeft: "-3rem" }}
+                  className="flex items-center justify-center"
+                  style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
                 >
-                  <p className="max-w-[560px] text-right text-[15px] leading-[1.8] text-white/75">
+                  <p
+                    className="max-w-[720px] text-center text-[22px] leading-[1.7] text-white/85"
+                    style={{ marginTop: -110 }}
+                  >
                     {content.text}
                   </p>
                 </div>

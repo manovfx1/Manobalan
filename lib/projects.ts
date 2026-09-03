@@ -45,7 +45,7 @@ export const projects: Project[] = [
   {
     slug: "runemere",
     title: "Runemere",
-    category: "VR Survival Escape Adventure",
+    category: "Survival Escape Adventure",
     year: "2026",
     cardDescription: "A VR survival-escape game guided by diegetic storytelling.",
     role: "Technical Artist and Game Designer",
