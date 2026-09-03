@@ -112,7 +112,8 @@ export const projects: Project[] = [
       "AI",
     ],
     mediaLabel: "[YouTube Video Embed]",
-    coverImage: "/images/work/sealed-in-stone.png",
+    youtubeId: "c-TcbldGPU8",
+    coverImage: "/images/work/sealed-in-stone-cover.jpg",
     sections: [
       {
         id: "game-idea",
