@@ -24,9 +24,9 @@ const SKILLS = [
   "3D sculpting, modelling, and realistic texturing across professional and academic projects.",
   "Environment building and cinematic lighting (UE5, Unity) for spatial atmosphere and depth.",
   "Gameplay and system mechanics, interactive logic and user-facing VR systems.",
-  "Basic Python and C# scripting with AI-assisted debugging and custom tool development.",
+  "Basic Python and C# scripting with custom scripting and AI-assisted debugging.",
   "XR Interaction Toolkit for grabbing, sockets, and responsive interaction mechanics.",
-  "UI/UX design (Figma) with user-centred thinking.",
+  "UI/UX design (Figma) bringing user-centred thinking to interface and interaction decisions.",
   "Generative AI tools for image/video generation and creative prompt engineering.",
 ];
 

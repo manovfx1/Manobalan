@@ -10,7 +10,11 @@
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: #000000;
+  background-color: #000000;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 0.5px, transparent 0.5px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 6px 6px, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
   display: flex;
   flex-direction: column;
   align-items: center;
