@@ -110,6 +110,7 @@ export default function AboutContent() {
               alt="Manobalan"
               fill
               sizes="(min-width: 900px) 380px, 60vw"
+              quality={100}
               className="object-contain"
               priority
             />
