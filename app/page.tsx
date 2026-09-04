@@ -14,9 +14,12 @@ export default function WorkPage() {
 
       {revealed && (
         <div className="work-grid pb-12">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.slug} project={project} delay={0.15 + i * 0.15} index={i} />
-          ))}
+          {/* Runemere temporarily hidden from the grid */}
+          {projects
+            .filter((project) => project.slug !== "runemere")
+            .map((project, i) => (
+              <ProjectCard key={project.slug} project={project} delay={0.15 + i * 0.15} index={i} />
+            ))}
         </div>
       )}
     </main>
