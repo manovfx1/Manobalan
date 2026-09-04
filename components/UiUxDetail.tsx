@@ -1,11 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "./AnimatedSection";
 import OptionWheel from "./OptionWheel";
 import type { UiUxProject } from "@/lib/uiuxProjects";
+
+const MOBILE_QUERY = "(max-width: 899px)";
+
+function subscribeToMobileQuery(callback: () => void) {
+  const mq = window.matchMedia(MOBILE_QUERY);
+  mq.addEventListener("change", callback);
+  return () => mq.removeEventListener("change", callback);
+}
+
+function getIsMobileSnapshot() {
+  return window.matchMedia(MOBILE_QUERY).matches;
+}
+
+function getIsMobileServerSnapshot() {
+  return false;
+}
+
+function useIsMobile() {
+  return useSyncExternalStore(subscribeToMobileQuery, getIsMobileSnapshot, getIsMobileServerSnapshot);
+}
 
 function CornerBrackets() {
   return (
@@ -228,6 +248,7 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
   const wheelData = UIUX_WHEEL_DATA[project.slug];
   const [activeItem, setActiveItem] = useState(wheelData?.items[0] ?? "");
   const content: WheelContent = wheelData?.content[activeItem] ?? { type: "empty" };
+  const isMobile = useIsMobile();
 
   return (
     <main className="page-shell">
@@ -248,27 +269,27 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
 
       {wheelData ? (
         <div className="uiux-split">
-          <div className="uiux-left" style={{ transform: "translateY(-108px)" }}>
+          <div className="uiux-left" style={{ transform: isMobile ? "none" : "translateY(-108px)" }}>
             <OptionWheel
               items={wheelData.items}
               defaultSelected={0}
               textColor="#a6a6a6"
               activeColor="#ffffff"
               side="left"
-              fontSize={2.4}
+              fontSize={isMobile ? 1.3 : 2.4}
               spacing={1.5}
               curve={1}
               tilt={6}
               blur={2}
               fade={0.25}
               smoothing={200}
-              inset={48}
+              inset={isMobile ? 16 : 48}
               loop
               draggable
               onChange={(_, item) => setActiveItem(item)}
             />
           </div>
-          <div className="uiux-right" style={{ transform: "translateY(-48px)" }}>
+          <div className="uiux-right" style={{ transform: isMobile ? "none" : "translateY(-48px)" }}>
             <AnimatedSection key={activeItem} type="slideInRight" duration={0.6}>
               {content.type === "gallery" && (
                 <div style={{ marginTop: content.offsetY }}>
@@ -380,8 +401,8 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                   style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
                 >
                   <p
-                    className="max-w-[720px] text-center text-[22px] leading-[1.7] text-white/85"
-                    style={{ marginTop: -110 }}
+                    className="max-w-[90vw] text-center text-[18px] leading-[1.6] text-white/85 sm:max-w-[720px] sm:text-[22px] sm:leading-[1.7]"
+                    style={{ marginTop: isMobile ? 0 : -110 }}
                   >
                     {content.text}
                   </p>
