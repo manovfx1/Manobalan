@@ -30,10 +30,10 @@ function useIsMobile() {
 function CornerBrackets() {
   return (
     <>
-      <span className="pointer-events-none absolute -top-3 -left-3 h-6 w-6 border-t-[3px] border-l-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -top-3 -right-3 h-6 w-6 border-t-[3px] border-r-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -bottom-3 -left-3 h-6 w-6 border-b-[3px] border-l-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 border-b-[3px] border-r-[3px] border-white/85" />
+      <span className="pointer-events-none absolute -top-3 -left-3 h-6 w-6 border-t-[3px] border-l-[3px] border-black/85" />
+      <span className="pointer-events-none absolute -top-3 -right-3 h-6 w-6 border-t-[3px] border-r-[3px] border-black/85" />
+      <span className="pointer-events-none absolute -bottom-3 -left-3 h-6 w-6 border-b-[3px] border-l-[3px] border-black/85" />
+      <span className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 border-b-[3px] border-r-[3px] border-black/85" />
     </>
   );
 }
@@ -261,7 +261,7 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
 
         <AnimatedSection type="slideInLeft" duration={0.8}>
           <h1 className="text-[20px] md:text-[28px] font-light mb-0.5 tracking-tight">{project.title}</h1>
-          <p className="max-w-[260px] text-[11px] uppercase tracking-[1.5px] text-white/45 mb-6">
+          <p className="max-w-[260px] text-[11px] uppercase tracking-[1.5px] text-black/45 mb-6">
             {project.category}
           </p>
         </AnimatedSection>
@@ -274,7 +274,7 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
               items={wheelData.items}
               defaultSelected={0}
               textColor="#a6a6a6"
-              activeColor="#ffffff"
+              activeColor="#000000"
               side="left"
               fontSize={isMobile ? 1.3 : 2.4}
               spacing={1.5}
@@ -339,7 +339,7 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                       {content.overlayText && (
                         <div className="absolute inset-0 flex items-center justify-center px-[26%]">
                           <p
-                            className="text-center text-[12px] leading-[1.6] text-white/85"
+                            className="text-center text-[12px] leading-[1.6] text-black/85"
                             style={{ marginTop: 60 }}
                           >
                             {content.overlayText}
@@ -401,7 +401,7 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                   style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
                 >
                   <p
-                    className="max-w-[90vw] text-center text-[18px] leading-[1.6] text-white/85 sm:max-w-[720px] sm:text-[22px] sm:leading-[1.7]"
+                    className="max-w-[90vw] text-center text-[18px] leading-[1.6] text-black/85 sm:max-w-[720px] sm:text-[22px] sm:leading-[1.7]"
                     style={{ marginTop: isMobile ? 0 : -110 }}
                   >
                     {content.text}
@@ -410,13 +410,13 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
               )}
 
               {content.type === "empty" && (
-                <p className="text-[12px] uppercase tracking-[1.5px] text-white/35 mt-4">[Content coming soon]</p>
+                <p className="text-[12px] uppercase tracking-[1.5px] text-black/35 mt-4">[Content coming soon]</p>
               )}
             </AnimatedSection>
           </div>
         </div>
       ) : (
-        <p className="text-[12px] uppercase tracking-[1.5px] text-white/35 mt-4">[Content coming soon]</p>
+        <p className="text-[12px] uppercase tracking-[1.5px] text-black/35 mt-4">[Content coming soon]</p>
       )}
     </main>
   );

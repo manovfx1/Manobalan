@@ -81,7 +81,7 @@ export default function OptionWheel({
   defaultSelected = 3,
   onChange,
   textColor = "#a6a6a6",
-  activeColor = "#ffffff",
+  activeColor = "#000000",
   side = "left",
   fontSize = 3,
   spacing = 1.4,

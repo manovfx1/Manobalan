@@ -68,14 +68,14 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
           <AnimatedSection type="slideInLeft" duration={0.8}>
             <h1 className="text-[20px] md:text-[28px] font-light mb-0.5 tracking-tight">{project.title}</h1>
-            <p className="text-[11px] uppercase tracking-[1.5px] text-white/45 mb-6">
+            <p className="text-[11px] uppercase tracking-[1.5px] text-black/45 mb-6">
               {project.year} — {project.category}
             </p>
           </AnimatedSection>
 
           <AnimatedSection type="slideInLeft" duration={0.8} delay={0.1}>
             <div className="media-box-wrap">
-              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 detail-media-bg">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-black/10 detail-media-bg">
                 {project.youtubeId ? (
                   <YouTubeEmbed id={project.youtubeId} title={project.title} />
                 ) : (
@@ -85,24 +85,24 @@ export default function ProjectDetail({ project }: { project: Project }) {
             </div>
           </AnimatedSection>
 
-          <div className="border-t border-white/10 pt-6 mt-3 pb-8 flex flex-col gap-0.5">
+          <div className="border-t border-black/10 pt-6 mt-3 pb-8 flex flex-col gap-0.5">
             <AnimatedSection type="fadeInUp" duration={0.6} delay={0.2} className="-mt-2">
-              <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-1">Role</p>
-              <p className="text-[16px] text-white/75">{project.role}</p>
+              <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-1">Role</p>
+              <p className="text-[16px] text-black/75">{project.role}</p>
               {project.roleDescription && (
-                <p className="text-[13px] leading-[1.6] text-white/40 mt-0">{project.roleDescription}</p>
+                <p className="text-[13px] leading-[1.6] text-black/40 mt-0">{project.roleDescription}</p>
               )}
             </AnimatedSection>
 
             {project.projectInfo && (
               <AnimatedSection type="fadeInUp" duration={0.6} delay={0.22} className="mt-4">
-                <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-1">Project</p>
-                <p className="text-[16px] text-white/75">{project.projectInfo}</p>
+                <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-1">Project</p>
+                <p className="text-[16px] text-black/75">{project.projectInfo}</p>
               </AnimatedSection>
             )}
 
             <AnimatedSection type="fadeInUp" duration={0.6} delay={0.25} className="mt-4">
-              <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-1">
+              <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-1">
                 Tools &amp; Technologies
               </p>
               <div className="tools-wrap">
@@ -216,7 +216,7 @@ function SectionBody({
     <AnimatedSection type="sectionFadeIn" duration={0.4} className="pb-8">
       <div className="mt-6 px-2">
         {showHeading && (
-          <div className="border-b border-white/10 pb-4 mb-4">
+          <div className="border-b border-black/10 pb-4 mb-4">
             <h2
               className="tab-btn inline-flex items-center justify-center w-[168px] h-[48px] text-center"
               data-active="true"
@@ -235,7 +235,7 @@ function SectionBody({
             <p
               key={i}
               className={`font-light text-[14px] mb-5 ${
-                isCaptionSection ? "text-white/45 text-center" : "text-white/70 text-justify"
+                isCaptionSection ? "text-black/45 text-center" : "text-black/70 text-justify"
               } ${heading === "Narrative Storyboard" ? "leading-[1.4]" : "leading-[1.8]"}`}
             >
               {p}
@@ -245,9 +245,9 @@ function SectionBody({
         {list && (
           <ul className="list-disc pl-5 mb-5 space-y-2">
             {list.map((item) => (
-              <li key={item.title} className="text-white/70">
-                <p className="text-[13px] font-normal text-white/80 mb-0">{item.title}</p>
-                <p className="font-light text-[14px] leading-[1.8] text-white/70 text-justify">{item.description}</p>
+              <li key={item.title} className="text-black/70">
+                <p className="text-[13px] font-normal text-black/80 mb-0">{item.title}</p>
+                <p className="font-light text-[14px] leading-[1.8] text-black/70 text-justify">{item.description}</p>
               </li>
             ))}
           </ul>
@@ -273,7 +273,7 @@ function SectionBody({
               } ${useFullQualityLayout ? "" : "doc-image"}`}
             >
               {isDesignReferences && (
-                <p className="text-[13px] font-normal text-white/45 mb-0 text-center">
+                <p className="text-[13px] font-normal text-black/45 mb-0 text-center">
                   Level Reference {i + 1}
                 </p>
               )}

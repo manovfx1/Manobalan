@@ -28,7 +28,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-100 bg-black/90 backdrop-blur-[15px] border-b border-white/8">
+    <header className="fixed top-0 left-0 right-0 z-100 bg-white/90 backdrop-blur-[15px] border-b border-black/8">
       <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 py-3 md:px-8">
         <Link
           href="/"
@@ -43,7 +43,7 @@ export default function Header() {
               router.push("/");
             }
           }}
-          className="justify-self-start text-[14px] font-semibold tracking-[3px] uppercase text-white opacity-90 transition-opacity duration-300 hover:opacity-100"
+          className="justify-self-start text-[14px] font-semibold tracking-[3px] uppercase text-black opacity-90 transition-opacity duration-300 hover:opacity-100"
         >
           ManoBalan
         </Link>
@@ -56,12 +56,12 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className="relative py-1 text-[12px] tracking-[2px] uppercase transition-colors duration-300"
-                style={{ color: active ? "#fff" : "rgba(255,255,255,0.5)" }}
+                style={{ color: active ? "#000" : "rgba(0,0,0,0.5)" }}
               >
                 {item.label}
                 {active && (
                   <span
-                    className="absolute left-0 bottom-0.5 h-px w-full bg-white origin-left"
+                    className="absolute left-0 bottom-0.5 h-px w-full bg-black origin-left"
                     style={{ animation: "navUnderline 0.4s var(--ease-premium)" }}
                   />
                 )}
@@ -76,7 +76,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-white/80 transition-colors duration-300 hover:text-white"
+            className="text-black/80 transition-colors duration-300 hover:text-black"
           >
             <LinkedInIcon />
           </a>
@@ -85,7 +85,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
-            className="text-white/80 transition-colors duration-300 hover:text-white"
+            className="text-black/80 transition-colors duration-300 hover:text-black"
           >
             <MailIcon />
           </a>
@@ -103,7 +103,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden flex flex-col gap-1 border-t border-white/8 px-6 py-4">
+        <nav className="md:hidden flex flex-col gap-1 border-t border-black/8 px-6 py-4">
           {NAV_ITEMS.map((item) => {
             const active = isActive(pathname, item.href);
             return (
@@ -112,7 +112,7 @@ export default function Header() {
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="py-3 text-[13px] tracking-[2px] uppercase transition-colors duration-300"
-                style={{ color: active ? "#fff" : "rgba(255,255,255,0.5)" }}
+                style={{ color: active ? "#000" : "rgba(0,0,0,0.5)" }}
               >
                 {item.label}
               </Link>

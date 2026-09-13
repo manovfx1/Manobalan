@@ -69,8 +69,8 @@ export default function ModelsPage() {
         hideDefaultCursor
         parallaxOn
         hoverDuration={0.5}
-        cursorColor="#ffffff"
-        cursorColorOnTarget="#ffffff"
+        cursorColor="#000000"
+        cursorColorOnTarget="#000000"
       />
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {MODEL_ITEMS.map((item, i) => (

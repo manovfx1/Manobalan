@@ -59,13 +59,13 @@ export default function AboutContent() {
         <div className="about-content">
           <AnimatedSection type="pageIn" duration={0.7}>
             <h1 className="text-4xl md:text-5xl font-light mb-3 tracking-tight">Hi, I&apos;m Manobalan</h1>
-            <p className="text-[15px] leading-[1.5] text-white/70 mb-6">
+            <p className="text-[15px] leading-[1.5] text-black/70 mb-6">
               Technical Artist &amp; UI/UX Designer | Passionate about building Immersive Digital Experiences
             </p>
           </AnimatedSection>
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.1} className="mb-6">
-            <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-2">Tools &amp; Software</p>
+            <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-2">Tools &amp; Software</p>
             <div className="tools-wrap">
               {TOOLS.map((tool) => (
                 <span key={tool} className="tool-tag">
@@ -76,10 +76,10 @@ export default function AboutContent() {
           </AnimatedSection>
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.15} className="mb-6">
-            <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-2">Skills Summary</p>
+            <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-2">Skills Summary</p>
             <ul className="list-disc pl-5 space-y-1.5">
               {SKILLS.map((skill) => (
-                <li key={skill} className="text-[14px] leading-[1.4] text-white/70">
+                <li key={skill} className="text-[14px] leading-[1.4] text-black/70">
                   {skill}
                 </li>
               ))}
@@ -87,16 +87,16 @@ export default function AboutContent() {
           </AnimatedSection>
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.2} className="-mt-4">
-            <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-3">Experience</p>
+            <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-3">Experience</p>
             <div className="flex flex-col gap-3">
               {EXPERIENCE.map((entry) => (
-                <div key={entry.title} className="border-t border-white/10 pt-2.5">
-                  <h3 className="text-[16px] text-white/85 mb-0.5">{entry.title}</h3>
-                  <p className="text-[11px] uppercase tracking-[1.5px] text-white/40 mb-2">
+                <div key={entry.title} className="border-t border-black/10 pt-2.5">
+                  <h3 className="text-[16px] text-black/85 mb-0.5">{entry.title}</h3>
+                  <p className="text-[11px] uppercase tracking-[1.5px] text-black/40 mb-2">
                     {entry.company ? `${entry.company} — ` : ""}
                     {entry.dates}
                   </p>
-                  <p className="text-[14px] leading-[1.7] text-white/70">{entry.description}</p>
+                  <p className="text-[14px] leading-[1.7] text-black/70">{entry.description}</p>
                 </div>
               ))}
             </div>

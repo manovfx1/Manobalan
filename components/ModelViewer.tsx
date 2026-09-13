@@ -16,7 +16,7 @@ function Model({ src }: { src: string }) {
 export default function ModelViewer({ src, margin = 1.2 }: { src: string; margin?: number }) {
   return (
     <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-      <color attach="background" args={["#141414"]} />
+      <color attach="background" args={["#ebebeb"]} />
       <ambientLight intensity={0.6} />
       <directionalLight position={[5, 5, 5]} intensity={1.2} />
       <directionalLight position={[-5, 2, -5]} intensity={0.4} />

@@ -20,7 +20,7 @@ export default function ModelLightbox({ model, alt, onClose }: ModelLightboxProp
 
   return (
     <div
-      className="fixed inset-0 z-200 flex items-center justify-center bg-black/80"
+      className="fixed inset-0 z-200 flex items-center justify-center bg-white/80"
       style={{ animation: "backdropIn 0.3s ease-out" }}
       onClick={onClose}
     >
@@ -28,7 +28,7 @@ export default function ModelLightbox({ model, alt, onClose }: ModelLightboxProp
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-6 right-6 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/40 text-white transition-colors duration-200 hover:border-white/40 hover:bg-black/70"
+        className="absolute top-6 right-6 z-10 grid h-11 w-11 place-items-center rounded-full border border-black/20 bg-white/40 text-black transition-colors duration-200 hover:border-black/40 hover:bg-white/70"
       >
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -43,7 +43,7 @@ export default function ModelLightbox({ model, alt, onClose }: ModelLightboxProp
         <ModelViewer src={model} />
       </div>
 
-      <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[12px] uppercase tracking-[1.5px] text-white/45">
+      <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[12px] uppercase tracking-[1.5px] text-black/45">
         {alt}
       </p>
     </div>
