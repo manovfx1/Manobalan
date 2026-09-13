@@ -82,7 +82,7 @@ interface SkillCard {
 const SKILL_CARDS: SkillCard[] = [
   { icon: EnginesIcon, label: "Engines", tools: "Unreal Engine 5 · Unity 6" },
   { icon: CubeIcon, label: "3D & Textures", tools: "Blender · Substance 3D Painter · Marvelous Designer" },
-  { icon: CodeIcon, label: "Code", tools: "C# · Python · GitHub" },
+  { icon: CodeIcon, label: "Code", tools: "Python · C# (Basic) · GitHub" },
   { icon: DesignIcon, label: "Design", tools: "Figma · Illustrator · Photoshop" },
   { icon: MotionIcon, label: "Motion", tools: "Cinema 4D · After Effects" },
   { icon: SparkleIcon, label: "AI Tools", tools: "Generative AI Tools" },
