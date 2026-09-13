@@ -43,9 +43,10 @@ export default function Header() {
               router.push("/");
             }
           }}
-          className="justify-self-start text-[14px] font-semibold tracking-[3px] uppercase text-white opacity-90 transition-opacity duration-300 hover:opacity-100"
+          className="justify-self-start inline-flex items-center text-[14px] font-semibold tracking-[3px] uppercase text-white opacity-90 transition-opacity duration-300 hover:opacity-100"
         >
           ManoBalan
+          <span className="ml-1 h-1.5 w-1.5 rounded-full bg-[#EA580C]" />
         </Link>
 
         <nav className="hidden items-center gap-12 justify-self-center md:flex">
