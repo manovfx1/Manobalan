@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Urbanist, Inter, Be_Vietnam_Pro } from "next/font/google";
-import FilmGrain from "@/components/FilmGrain";
 import Header from "@/components/Header";
 import "./globals.css";
+
+// FilmGrain disabled — last values: intensity={0.62} opacity={0.15}. Re-add <FilmGrain /> below body's children on request.
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -34,7 +35,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full bg-black text-white antialiased">
         <Header />
         {children}
-        <FilmGrain intensity={0.62} opacity={0.15} />
       </body>
     </html>
   );
