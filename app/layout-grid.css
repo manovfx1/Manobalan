@@ -38,7 +38,8 @@
 }
 
 /* ============ Project detail page font ============ */
-.project-detail-page {
+.project-detail-page,
+.about-page {
   font-family: var(--font-be-vietnam), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
