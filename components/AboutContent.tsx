@@ -97,12 +97,13 @@ interface ExperienceEntry {
 
 const EXPERIENCE: ExperienceEntry[] = [
   {
-    title: "Freelance 3D Animation & VFX Artist",
+    title: "3D Graphics Artist",
+    company: "Freelancer - Self employed & Contract",
     dates: "Oct 2023 – Dec 2025",
     description: "VFX, motion graphics, 3D animation for film/broadcast.",
   },
   {
-    title: "3D Motion Graphics Production Artist",
+    title: "Senior 3D Artist",
     company: "Zee Entertainment Enterprises",
     dates: "Nov 2024 – Sep 2025",
     description:
@@ -176,11 +177,15 @@ export default function AboutContent() {
             <div className="flex flex-col gap-3">
               {EXPERIENCE.map((entry) => (
                 <div key={entry.title} className="border-t border-white/10 pt-2.5">
-                  <h3 className="text-[16px] text-white/85 mb-0.5">{entry.title}</h3>
-                  <p className="text-[11px] uppercase tracking-[1.5px] text-white/40 mb-2">
-                    {entry.company ? `${entry.company} — ` : ""}
-                    {entry.dates}
-                  </p>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <h3 className="text-[16px] text-white/85 mb-0.5">{entry.title}</h3>
+                    <p className="text-[11px] uppercase tracking-[1.5px] text-white/40 whitespace-nowrap">
+                      {entry.dates}
+                    </p>
+                  </div>
+                  {entry.company && (
+                    <p className="text-[13px] text-white/50 mb-2">{entry.company}</p>
+                  )}
                   <p className="text-[14px] leading-[1.7] text-white/70">{entry.description}</p>
                 </div>
               ))}
