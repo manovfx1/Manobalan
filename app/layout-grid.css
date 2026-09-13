@@ -266,7 +266,7 @@
   .about-photo {
     flex: 0 0 clamp(320px, 36vw, 520px);
     margin-left: auto;
-    margin-right: clamp(2rem, 12vw, 14rem);
+    margin-right: clamp(0.5rem, 5vw, 6rem);
     position: sticky;
     top: calc(var(--header-height) + 3rem);
   }
