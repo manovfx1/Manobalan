@@ -155,21 +155,6 @@
 }
 
 /* ============ Project card hover ============ */
-/* Caption sits inside the image box by default (pulled up via transform);
-   hover moves it back to its natural position below/outside the box. */
-.card-caption {
-  position: relative;
-  z-index: 6;
-  padding: 0 24px 22px;
-  transform: translateY(-78px);
-  transition: transform 0.3s var(--ease-premium);
-}
-
-.group:hover .card-caption {
-  transform: translateY(0);
-  transition: transform 0.4s var(--ease-premium);
-}
-
 .card-year {
   position: absolute;
   right: 24px;
