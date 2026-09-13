@@ -46,7 +46,7 @@ export default function Header() {
           className="justify-self-start inline-flex items-center text-[14px] font-semibold tracking-[3px] uppercase text-white opacity-90 transition-opacity duration-300 hover:opacity-100"
         >
           ManoBalan
-          <span className="ml-1 h-1.5 w-1.5 rounded-full bg-[#EA580C]" />
+          <span className="ml-1 mt-1.5 h-1 w-1 rounded-full bg-[#EA580C]" />
         </Link>
 
         <nav className="hidden items-center gap-12 justify-self-center md:flex">
