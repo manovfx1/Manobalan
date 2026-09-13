@@ -114,7 +114,7 @@ const EXPERIENCE: ExperienceEntry[] = [
 export default function AboutContent() {
   return (
     <main
-      className="page-shell bg-black text-white"
+      className="page-shell about-page bg-black text-white"
       style={{ paddingTop: "calc(var(--header-height) + 3rem)" }}
     >
       <div className="about-split">
