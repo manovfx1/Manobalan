@@ -14,7 +14,7 @@
 @theme inline {
   --color-background: var(--color-bg);
   --color-foreground: var(--color-fg);
-  --font-sans: var(--font-mono);
+  --font-sans: var(--font-urbanist);
 }
 
 @layer base {
@@ -35,7 +35,7 @@
       repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 6px 6px, var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size);
     color: var(--color-fg);
-    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
