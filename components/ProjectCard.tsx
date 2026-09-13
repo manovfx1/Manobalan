@@ -50,7 +50,7 @@ export default function ProjectCard({
       >
         <div ref={wrapRef} onMouseMove={handleMouseMove} className="card-shadow-wrap">
           <div
-            className="media-dots relative w-full overflow-hidden rounded-2xl border border-white/30 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] transition-colors duration-500 group-hover:border-white/50"
+            className="media-dots relative w-full overflow-hidden rounded-2xl border border-black/30 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)] transition-colors duration-500 group-hover:border-black/50"
             style={{ aspectRatio }}
           >
             {project.coverImage ? (
@@ -128,7 +128,7 @@ export default function ProjectCard({
 
         <div className="card-caption mt-2">
           <h3 className="text-lg md:text-xl font-light">{project.title}</h3>
-          <p className="text-[10px] uppercase tracking-[1.5px] text-white/45 mb-1">{project.category}</p>
+          <p className="text-[10px] uppercase tracking-[1.5px] text-black/45 mb-1">{project.category}</p>
         </div>
       </Link>
     </AnimatedSection>
