@@ -97,17 +97,17 @@ interface ExperienceEntry {
 
 const EXPERIENCE: ExperienceEntry[] = [
   {
-    title: "3D Graphics Artist",
-    company: "Freelancer - Self employed & Contract",
-    dates: "Oct 2023 – Dec 2025",
-    description: "VFX, motion graphics, 3D animation for film/broadcast.",
-  },
-  {
     title: "Senior 3D Artist",
     company: "Zee Entertainment Enterprises",
     dates: "Nov 2024 – Sep 2025",
     description:
       "Broadcast compositing, animation, motion tracking, virtual production, and real-time visual set technology.",
+  },
+  {
+    title: "3D Graphics Artist",
+    company: "Freelancer - Self employed & Contract",
+    dates: "Oct 2023 – Dec 2025",
+    description: "VFX, motion graphics, 3D animation for film/broadcast.",
   },
 ];
 
