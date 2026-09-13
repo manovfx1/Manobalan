@@ -127,15 +127,6 @@
   }
 }
 
-.media-dots::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  background: radial-gradient(ellipse at center, transparent 50%, rgba(255, 255, 255, 0.55) 100%);
-  pointer-events: none;
-}
-
 .media-dots::after {
   content: "";
   position: absolute;
