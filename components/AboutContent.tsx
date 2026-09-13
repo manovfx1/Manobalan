@@ -132,9 +132,8 @@ export default function AboutContent() {
             >
               01 / Focus
             </p>
-            <h2 className="text-[42px] md:text-[52px] font-black leading-[0.95] tracking-tight mb-6">
-              WHAT
-              <br />I DO
+            <h2 className="text-[28px] md:text-[34px] font-black leading-[0.95] tracking-tight mb-6">
+              WHAT I DO
             </h2>
             <div className="flex flex-wrap gap-2.5 mb-6">
               {WHAT_I_DO.map((item) => (
@@ -153,9 +152,8 @@ export default function AboutContent() {
           <div className="border-t border-white/10 mb-12" />
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.15} className="mb-12">
-            <h2 className="text-[42px] md:text-[52px] font-black leading-[0.95] tracking-tight mb-6">
-              WHAT
-              <br />I KNOW
+            <h2 className="text-[28px] md:text-[34px] font-black leading-[0.95] tracking-tight mb-6">
+              WHAT I KNOW
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {SKILL_CARDS.map(({ icon: Icon, label, tools }) => (
