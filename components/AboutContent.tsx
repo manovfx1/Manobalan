@@ -120,7 +120,7 @@ export default function AboutContent() {
       <div className="about-split">
         <div className="about-content">
           <AnimatedSection type="pageIn" duration={0.7}>
-            <h1 className="text-4xl md:text-5xl font-light mb-3 tracking-tight">Hi, I&apos;m Manobalan</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Hi, I&apos;m Manobalan</h1>
             <p className="text-[15px] leading-[1.5] text-white/70 mb-10">
               Technical Artist &amp; UI/UX Designer | Passionate about building Immersive Digital Experiences
             </p>
