@@ -12,7 +12,7 @@ export default function UIUXPage() {
             delay={0.15 + i * 0.15}
             index={i}
             basePath="/ui-ux"
-            aspectRatio="1 / 1"
+            aspectRatio="4 / 3"
           />
         ))}
       </div>
