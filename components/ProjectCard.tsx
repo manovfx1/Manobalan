@@ -48,11 +48,12 @@ export default function ProjectCard({
         className="group block transition-transform duration-500 hover:-translate-y-1.5"
         style={{ transitionTimingFunction: "cubic-bezier(0.23, 1, 0.32, 1)" }}
       >
-        <div ref={wrapRef} onMouseMove={handleMouseMove} className="card-shadow-wrap">
-          <div
-            className="media-dots relative w-full overflow-hidden rounded-2xl border border-white/30 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] transition-colors duration-500 group-hover:border-[#EA580C]/70"
-            style={{ aspectRatio }}
-          >
+        <div
+          ref={wrapRef}
+          onMouseMove={handleMouseMove}
+          className="card-shadow-wrap overflow-hidden rounded-2xl border border-white/30 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] transition-colors duration-500 group-hover:border-[#EA580C]/70"
+        >
+          <div className="media-dots relative w-full overflow-hidden" style={{ aspectRatio }}>
             {project.coverImage ? (
               imageInset ? (
                 <div className="absolute inset-[20%]">
@@ -82,6 +83,14 @@ export default function ProjectCard({
               </span>
             )}
           </div>
+
+          <div className="flex items-center justify-between gap-3 border-t border-white/10 px-6 py-4">
+            <h3 className="text-lg md:text-xl font-semibold">{project.title}</h3>
+            <p className="text-[10px] uppercase tracking-[1.5px] text-white/45 whitespace-nowrap">
+              {project.category}
+            </p>
+          </div>
+
           <div className="cursor-move-follower" aria-hidden="true">
             <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
               <defs>
@@ -124,11 +133,6 @@ export default function ProjectCard({
               </g>
             </svg>
           </div>
-        </div>
-
-        <div className="card-caption mt-2">
-          <h3 className="text-lg md:text-xl font-light">{project.title}</h3>
-          <p className="text-[10px] uppercase tracking-[1.5px] text-white/45 mb-1">{project.category}</p>
         </div>
       </Link>
     </AnimatedSection>
