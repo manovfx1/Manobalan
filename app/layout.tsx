@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist, Inter, Be_Vietnam_Pro } from "next/font/google";
 import Header from "@/components/Header";
-import ConditionalSilk from "@/components/ConditionalSilk";
 import "./globals.css";
 
 // FilmGrain disabled — last values: intensity={0.62} opacity={0.15}. Re-add <FilmGrain /> below body's children on request.
@@ -33,14 +32,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${urbanist.variable} ${inter.variable} ${beVietnamPro.variable} h-full`}>
-      <body className="min-h-full bg-black text-white antialiased">
-        <div className="fixed inset-0 z-0" style={{ pointerEvents: "none" }}>
-          <ConditionalSilk />
-        </div>
-        <div className="relative z-10">
-          <Header />
-          {children}
-        </div>
+      <body className="min-h-full bg-white text-black antialiased">
+        <Header />
+        {children}
       </body>
     </html>
   );
