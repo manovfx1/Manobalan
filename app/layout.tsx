@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${urbanist.variable} ${inter.variable} ${beVietnamPro.variable} h-full`}>
-      <body className="min-h-full bg-white text-black antialiased">
+      <body className="min-h-full bg-black text-white antialiased">
         <div className="fixed inset-0 z-0" style={{ pointerEvents: "none" }}>
-          <Silk speed={5.9} scale={0.5} color="#f2f2f0" noiseIntensity={0.6} rotation={0} lightMode />
+          <Silk speed={5.9} scale={0.5} color="#252526" noiseIntensity={0.6} rotation={0} />
         </div>
         <div className="relative z-10">
           <Header />

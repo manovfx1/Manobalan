@@ -58,7 +58,7 @@ export default function TargetCursor({
   hideDefaultCursor = true,
   hoverDuration = 0.2,
   parallaxOn = true,
-  cursorColor = "#000000",
+  cursorColor = "#ffffff",
   cursorColorOnTarget,
 }: TargetCursorProps) {
   const cursorRef = useRef<HTMLDivElement>(null);
