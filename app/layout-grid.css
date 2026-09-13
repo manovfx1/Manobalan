@@ -249,7 +249,7 @@
 
 .about-photo {
   width: 100%;
-  max-width: 380px;
+  max-width: 520px;
 }
 
 @media (min-width: 900px) {
@@ -264,9 +264,9 @@
   }
 
   .about-photo {
-    flex: 0 0 clamp(240px, 28vw, 380px);
+    flex: 0 0 clamp(320px, 36vw, 520px);
     margin-left: auto;
-    margin-right: clamp(1rem, 10vw, 12rem);
+    margin-right: clamp(2rem, 12vw, 14rem);
     position: sticky;
     top: calc(var(--header-height) + 3rem);
   }

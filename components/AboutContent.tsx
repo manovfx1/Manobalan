@@ -196,10 +196,10 @@ export default function AboutContent() {
         <AnimatedSection type="slideInRight" duration={0.8} className="about-photo">
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
-              src="/images/about/profile-picture-2.png"
+              src="/images/about/Profile_Picture_1.png"
               alt="Manobalan"
               fill
-              sizes="(min-width: 900px) 380px, 60vw"
+              sizes="(min-width: 900px) 520px, 80vw"
               quality={100}
               className="object-contain"
               priority
