@@ -113,14 +113,14 @@ const EXPERIENCE: ExperienceEntry[] = [
 export default function AboutContent() {
   return (
     <main
-      className="page-shell bg-white text-black"
+      className="page-shell bg-black text-white"
       style={{ paddingTop: "calc(var(--header-height) + 3rem)" }}
     >
       <div className="about-split">
         <div className="about-content">
           <AnimatedSection type="pageIn" duration={0.7}>
             <h1 className="text-4xl md:text-5xl font-light mb-3 tracking-tight">Hi, I&apos;m Manobalan</h1>
-            <p className="text-[15px] leading-[1.5] text-black/70 mb-10">
+            <p className="text-[15px] leading-[1.5] text-white/70 mb-10">
               Technical Artist &amp; UI/UX Designer | Passionate about building Immersive Digital Experiences
             </p>
           </AnimatedSection>
@@ -140,17 +140,17 @@ export default function AboutContent() {
               {WHAT_I_DO.map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center gap-2 rounded-full border border-black/10 px-4 py-2 text-[13px] font-medium"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-[13px] font-medium"
                 >
                   <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
                   {item}
                 </span>
               ))}
             </div>
-            <p className="text-[15px] leading-[1.7] text-black/70 max-w-[520px]">{WHAT_I_DO_DESCRIPTION}</p>
+            <p className="text-[15px] leading-[1.7] text-white/70 max-w-[520px]">{WHAT_I_DO_DESCRIPTION}</p>
           </AnimatedSection>
 
-          <div className="border-t border-black/10 mb-12" />
+          <div className="border-t border-white/10 mb-12" />
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.15} className="mb-12">
             <h2 className="text-[42px] md:text-[52px] font-black leading-[0.95] tracking-tight mb-6">
@@ -159,7 +159,7 @@ export default function AboutContent() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {SKILL_CARDS.map(({ icon: Icon, label, tools }) => (
-                <div key={label} className="rounded-2xl border border-black/10 p-5">
+                <div key={label} className="rounded-2xl border border-white/10 p-5">
                   <Icon />
                   <p
                     className="text-[11px] uppercase tracking-[1.5px] font-semibold mt-4 mb-1"
@@ -174,16 +174,16 @@ export default function AboutContent() {
           </AnimatedSection>
 
           <AnimatedSection type="fadeInUp" duration={0.6} delay={0.2}>
-            <p className="text-[12px] uppercase tracking-[1.5px] text-black/45 mb-3">Experience</p>
+            <p className="text-[12px] uppercase tracking-[1.5px] text-white/45 mb-3">Experience</p>
             <div className="flex flex-col gap-3">
               {EXPERIENCE.map((entry) => (
-                <div key={entry.title} className="border-t border-black/10 pt-2.5">
-                  <h3 className="text-[16px] text-black/85 mb-0.5">{entry.title}</h3>
-                  <p className="text-[11px] uppercase tracking-[1.5px] text-black/40 mb-2">
+                <div key={entry.title} className="border-t border-white/10 pt-2.5">
+                  <h3 className="text-[16px] text-white/85 mb-0.5">{entry.title}</h3>
+                  <p className="text-[11px] uppercase tracking-[1.5px] text-white/40 mb-2">
                     {entry.company ? `${entry.company} — ` : ""}
                     {entry.dates}
                   </p>
-                  <p className="text-[14px] leading-[1.7] text-black/70">{entry.description}</p>
+                  <p className="text-[14px] leading-[1.7] text-white/70">{entry.description}</p>
                 </div>
               ))}
             </div>
