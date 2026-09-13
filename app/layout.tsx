@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${urbanist.variable} ${inter.variable} ${beVietnamPro.variable} h-full`}>
-      <body className="min-h-full bg-white text-black antialiased">
+      <body className="min-h-full bg-black text-white antialiased">
         <Header />
         {children}
       </body>
