@@ -62,7 +62,7 @@ export default function Header() {
                 {item.label}
                 {active && (
                   <span
-                    className="absolute left-0 bottom-0.5 h-[2px] w-full bg-[#EA580C] origin-left"
+                    className="absolute left-0 bottom-0.5 h-px w-full bg-[#EA580C] origin-left"
                     style={{ animation: "navUnderline 0.4s var(--ease-premium)" }}
                   />
                 )}
