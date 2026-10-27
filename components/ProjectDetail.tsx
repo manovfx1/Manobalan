@@ -10,13 +10,13 @@ import YouTubeEmbed from "./YouTubeEmbed";
 import { IMAGE_DIMENSIONS, type Project, type ProjectListItem, type ProjectSection } from "@/lib/projects";
 
 const SEALED_IN_STONE_MODEL_ITEMS = [
-  { image: "/images/work/sealed-in-stone-model-1.jpg", alt: "Portal Market Entrances" },
-  { image: "/images/work/sealed-in-stone-model-2.jpg", alt: "Ancient Castle Gate" },
-  { image: "/images/work/sealed-in-stone-model-3.jpg", alt: "Ancient Castle Entrance" },
-  { image: "/images/work/sealed-in-stone-model-4.jpg", alt: "Wooden Arch Door" },
-  { image: "/images/work/sealed-in-stone-model-5.jpg", alt: "Six Pillars & Treasure" },
+  { image: "/images/work/sealed-in-stone-model-1.jpg", alt: "Portal market entrance" },
+  { image: "/images/work/sealed-in-stone-model-2.jpg", alt: "Ancient castle gate" },
+  { image: "/images/work/sealed-in-stone-model-3.jpg", alt: "Ancient castle entrance" },
+  { image: "/images/work/sealed-in-stone-model-4.jpg", alt: "Wooden arched doorway" },
+  { image: "/images/work/sealed-in-stone-model-5.jpg", alt: "Six pillars and treasure" },
   { image: "/images/work/sealed-in-stone-model-6.jpg", alt: "Market Wall" },
-  { image: "/images/work/sealed-in-stone-model-7.jpg", alt: "Sword Attachment" },
+  { image: "/images/work/sealed-in-stone-model-7.jpg", alt: "Sword stand" },
 ];
 
 const CAROUSEL_SIZE_TIERS = [

@@ -4,7 +4,7 @@ export default function ContactPage() {
   return (
     <PlaceholderPage
       heading="Contact"
-      paragraphs={["Get in touch via email, LinkedIn, GitHub, or through your professional network."]}
+      paragraphs={["Get in touch by email, on LinkedIn or GitHub, or through your professional network."]}
       comingSoon="[Contact details coming soon]"
     />
   );

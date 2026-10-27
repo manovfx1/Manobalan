@@ -95,9 +95,9 @@ export const projects: Project[] = [
     title: "Sealed in Stone",
     category: "VR Puzzle Adventure",
     year: "2026",
-    cardDescription: "Solo creator responsible for concept to playable experience.",
+    cardDescription: "Created solo, from concept through to playable experience.",
     role: "VR Technical Artist and Game Designer",
-    roleDescription: "Solo creator responsible for concept to playable experience.",
+    roleDescription: "Created solo, from concept through to playable experience.",
     projectInfo: "MSc Artefact, Brunel University London | Distinction | 2026",
     tools: [
       "Unity 6",
@@ -120,8 +120,8 @@ export const projects: Project[] = [
         label: "Game Idea",
         heading: "Game Idea",
         paragraphs: [
-          "Sealed in Stone is an immersive VR puzzle adventure set within an ancient fantasy environment. The narrative concept centers on an ancient palace that has been guarded for two centuries by a cursed warrior, condemned to protect its secret until a worthy challenger breaks the curse. When a young character discovers the palace and uncovers its hidden secret, the warrior captures them and imprisons them within the castle walls. The player takes the role of the character's companion, entering the palace to solve an ancient puzzle, break the curse, and rescue the young character.",
-          "The project is developed using Unity 6 with the XR interaction toolkit, targeting a head-mounted display for VR experiences. The core design focused on physical immersion, ensuring that every puzzle interaction system is designed to be unique through virtual reality experiences.",
+          "Sealed in Stone is an immersive VR puzzle adventure set in an ancient fantasy environment. The story centres on an ancient palace, guarded for two centuries by a cursed warrior who is condemned to protect its secret until a worthy challenger breaks the curse. When a young character discovers the palace and uncovers its hidden secret, the warrior captures them and imprisons them within its walls. The player takes on the role of the young character’s companion, entering the palace to solve an ancient puzzle, break the curse, and rescue them.",
+          "The project is built in Unity 6 using the XR Interaction Toolkit and targets a VR headset. Its design prioritises physical immersion, with each puzzle offering a distinct interaction designed for virtual reality.",
         ],
       },
       {
@@ -135,7 +135,7 @@ export const projects: Project[] = [
             label: "Narrative Storyboard",
             heading: "Narrative Storyboard",
             paragraphs: [
-              "Nine hand-drawn storyboards documenting the full player journey. Each view captures environment layout, puzzle placement and player perspective. No AI generation was used at any stage of the storyboard production.",
+              "Nine hand-drawn storyboards document the full player journey. Each frame captures the environment layout, puzzle placement, and player perspective. No AI was used at any stage of production.",
             ],
             image: "/images/work/sealed-in-stone-storyboard.jpg",
           },
@@ -144,7 +144,7 @@ export const projects: Project[] = [
             label: "Game Flow Diagram",
             heading: "Game Flow Diagram",
             paragraphs: [
-              "Three distinct physical puzzle interactions designed specifically for VR, each requiring a different cognitive skill.",
+              "The game features three distinct physical puzzles, each designed for VR and requiring a different cognitive skill.",
             ],
             image: "/images/work/sealed-in-stone-interaction-Game-flow-diagram.jpg",
           },
@@ -153,7 +153,7 @@ export const projects: Project[] = [
             label: "Pre-visualisation",
             heading: "Pre-visualisation",
             paragraphs: [
-              "Full low-polygon 3D previsualization built in Blender before Unity development.",
+              "A complete low-poly 3D pre-visualisation created in Blender before development in Unity.",
             ],
             image: "/images/work/sealed-in-stone-pre-visual.png",
           },
@@ -176,7 +176,7 @@ export const projects: Project[] = [
         label: "3D Assets",
         heading: "3D Assets",
         paragraphs: [
-          "All primary environment assets were modelled in Blender and textured in Substance Painter and Photoshop.",
+          "All primary environment assets were modelled in Blender and textured using Substance Painter and Photoshop.",
         ],
       },
       {
@@ -184,7 +184,7 @@ export const projects: Project[] = [
         label: "Systems Implementation",
         heading: "Systems Implementation",
         paragraphs: [
-          "Each puzzle uses XR Grab Interactable and XR Socket Interactor components with a custom tag-based matching system ensuring only the correct object fits each socket. Every system is controlled by C# scripts managing triggers, tags, animations, effects, audio and game mechanics, each stage independently controlling, managing and triggering the next.",
+          "Each puzzle uses XR Grab Interactable and XR Socket Interactor components, plus a custom tag-based matching system that ensures only the correct object fits each socket. C# scripts control triggers, tags, animations, visual effects, audio, and game mechanics. Each stage manages and triggers the next.",
         ],
         images: ["/images/work/sealed-in-stone-system-implementation.jpg"],
       },
@@ -198,37 +198,37 @@ export const projects: Project[] = [
         id: "research",
         label: "Research",
         heading: "Research",
-        paragraphs: ["Research grounded in academic areas."],
+        paragraphs: ["The design is informed by research into presence, immersion, and VR interaction."],
         list: [
           {
             title: "Presence Theory",
             description:
-              "Explores how users feel physically located inside a virtual environment. Higher presence creates stronger emotional engagement than flat screen experiences.",
+              "Presence theory explores how strongly users feel located within a virtual environment. A stronger sense of presence can increase emotional engagement compared with flat-screen experiences.",
           },
           {
             title: "Immersion in VR",
             description:
-              "Examines the technical capability of VR systems to deliver convincing sensory experiences. Visual, auditory and body tracking combine to create full immersion.",
+              "Research into VR immersion examines how systems use visual and auditory cues, along with body tracking, to create convincing sensory experiences.",
           },
           {
             title: "VR Game Design Pillars",
             description:
-              "Identifies perception, interaction and navigation as the three core design principles for VR games. These pillars guided the design of all three puzzle situations.",
+              "VR game design pillars identify perception, interaction, and navigation as three core design principles. These pillars informed the design of all three puzzles.",
           },
           {
             title: "Physical Puzzle Interaction Design",
             description:
-              "Physical grab and placement mechanics create more engaging puzzle experiences in VR. Players feel more satisfied solving puzzles through physical actions rather than button presses.",
+              "Physical grabbing and object placement can make VR puzzles more engaging. Players may find solving puzzles through physical actions more satisfying than using button presses.",
           },
           {
             title: "VR Game User Experience",
             description:
-              "Analysis of how players respond to different VR game genres and interaction systems. Combining immersive storytelling with physical interaction produces the strongest player engagement.",
+              "Research into VR user experience examines how players respond to different game genres and interaction systems. Combining immersive storytelling with physical interaction can strengthen player engagement.",
           },
           {
             title: "MDA Framework",
             description:
-              "A game design framework analysing games through Mechanics, Dynamics and Aesthetics. Design began with intended player feelings and worked backwards to mechanical implementation.",
+              "The MDA framework analyses games through mechanics, dynamics, and aesthetics. The design process began with the intended player experience and worked backwards to the mechanics.",
           },
         ],
       },
@@ -251,7 +251,7 @@ export const projects: Project[] = [
         label: "Concept",
         heading: "Concept",
         paragraphs: [
-          "An astronaut is sent into space on a critical mission. During his journey, a sudden technical failure causes the spacecraft to crash into the Indian Ocean, near the Asian coast. The crash kills him instantly, and his body begins floating in the water, carried by the waves. Yet somehow, he finds himself standing on the coast, looking out at the ocean. As he watches the floating body, he slowly realizes that it is his own.",
+          "An astronaut is sent into space on a critical mission. During his journey, a sudden technical failure causes the spacecraft to crash into the Indian Ocean, near the Asian coast. The crash kills him instantly, and his body begins floating in the water, carried by the waves. Yet somehow, he finds himself standing on the coast, looking out at the ocean. As he watches the floating body, he slowly realises that it is his own.",
           "He is dead, but still somehow able to see himself. The mission remains unfinished, and there is nothing he can do but watch his body drift away. The moment becomes a strange illusion between life and death, where he is forced to witness his own ending.",
         ],
       },

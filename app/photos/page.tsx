@@ -4,7 +4,7 @@ export default function PhotosPage() {
   return (
     <PlaceholderPage
       heading="Photos"
-      paragraphs={["Curated photography collection and visual documentation."]}
+      paragraphs={["This section will showcase a curated collection of photography and visual documentation."]}
       comingSoon="[Content coming soon]"
     />
   );

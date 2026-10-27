@@ -27,17 +27,6 @@ function useIsMobile() {
   return useSyncExternalStore(subscribeToMobileQuery, getIsMobileSnapshot, getIsMobileServerSnapshot);
 }
 
-function CornerBrackets() {
-  return (
-    <>
-      <span className="pointer-events-none absolute -top-3 -left-3 h-6 w-6 border-t-[3px] border-l-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -top-3 -right-3 h-6 w-6 border-t-[3px] border-r-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -bottom-3 -left-3 h-6 w-6 border-b-[3px] border-l-[3px] border-white/85" />
-      <span className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 border-b-[3px] border-r-[3px] border-white/85" />
-    </>
-  );
-}
-
 interface WheelContent {
   type: "gallery" | "single" | "video" | "text" | "empty";
   images?: string[];
@@ -49,7 +38,6 @@ interface WheelContent {
   offsetY?: number;
   widthPercent?: number;
   centerLine?: boolean;
-  corners?: boolean;
 }
 
 interface ProjectWheelData {
@@ -96,7 +84,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         dims: { width: 1576, height: 681 },
         offsetY: 120,
         widthPercent: 88,
-        corners: true,
       },
       Storyboard: {
         type: "single",
@@ -105,7 +92,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 82,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       Moodboard: {
         type: "single",
@@ -114,7 +100,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 82,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       "Logo design": {
         type: "single",
@@ -123,7 +108,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 72,
         centerLine: true,
         offsetY: -140,
-        corners: true,
       },
       Wireframes: {
         type: "single",
@@ -132,7 +116,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 82,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       "UX flow": {
         type: "single",
@@ -148,18 +131,16 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 92,
         centerLine: true,
         offsetY: -130,
-        corners: true,
       },
       "API connection": {
         type: "single",
         image: "/images/ui-ux/storygen/api-connection.png",
         dims: { width: 2216, height: 1960 },
         overlayText:
-          "StoryGen Integrated OpenAI, Google Gemini 2.5 Flash, and Runway ML APIs into a Next.js 15 application, with the Prompt Enhancer feature running live in the deployed version.",
+          "StoryGen integrates APIs from OpenAI, Google Gemini 2.5 Flash, and Runway ML into a Next.js 15 application. The Prompt Enhancer is available in the deployed version.",
         widthPercent: 55,
         centerLine: true,
         offsetY: -150,
-        corners: true,
       },
       "Image generation": {
         type: "single",
@@ -174,7 +155,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 58,
         centerLine: true,
         offsetY: -80,
-        corners: true,
       },
     },
   },
@@ -182,7 +162,7 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
     items: [
       "High-fidelity",
       "User Persona",
-      "Info Architecture",
+      "Information Architecture",
       "Low-fidelity",
       "Logo design",
       "Brand board",
@@ -195,16 +175,14 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         dims: { width: 4192, height: 3944 },
         offsetY: 10,
         widthPercent: 59,
-        corners: true,
       },
-      "Info Architecture": {
+      "Information Architecture": {
         type: "single",
         image: "/images/ui-ux/routex/info-architecture.png",
         dims: { width: 4192, height: 4980 },
         widthPercent: 72,
         centerLine: true,
         offsetY: 90,
-        corners: true,
       },
       "Low-fidelity": {
         type: "single",
@@ -213,7 +191,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 64,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       "Logo design": {
         type: "single",
@@ -222,7 +199,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 72,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       "Brand board": {
         type: "single",
@@ -231,7 +207,6 @@ const UIUX_WHEEL_DATA: Record<string, ProjectWheelData> = {
         widthPercent: 73,
         centerLine: true,
         offsetY: -110,
-        corners: true,
       },
       "High-fidelity": {
         type: "single",
@@ -253,23 +228,35 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
   return (
     <main className="page-shell">
       <div className="uiux-detail-header" style={{ paddingTop: "calc(var(--header-height) + 1.2rem)" }}>
-        <AnimatedSection type="fadeInUp" duration={0.7}>
-          <Link href="/ui-ux" className="back-link">
-            ← Back to UI/UX
-          </Link>
-        </AnimatedSection>
+        <Link href="/ui-ux" className="back-link uiux-back-link">
+          ← Back to UI/UX
+        </Link>
 
-        <AnimatedSection type="slideInLeft" duration={0.8}>
-          <h1 className="text-[20px] md:text-[28px] font-light mb-0.5 tracking-tight">{project.title}</h1>
-          <p className="max-w-[260px] text-[11px] uppercase tracking-[1.5px] text-white/45 mb-6">
-            {project.category}
-          </p>
-        </AnimatedSection>
+        <div className="uiux-title-row">
+          <h1 className="uiux-detail-title">{project.title}</h1>
+          <p className="uiux-detail-category">{project.category}</p>
+        </div>
       </div>
 
       {wheelData ? (
-        <div className="uiux-split">
-          <div className="uiux-left" style={{ transform: isMobile ? "none" : "translateY(-108px)" }}>
+        <>
+          <nav className="uiux-mobile-tabs" aria-label={`${project.title} sections`}>
+            {wheelData.items.map((item, index) => (
+              <button
+                key={item}
+                id={`uiux-tab-${index}`}
+                type="button"
+                aria-pressed={activeItem === item}
+                className="uiux-mobile-tab"
+                onClick={() => setActiveItem(item)}
+              >
+                {item}
+              </button>
+            ))}
+          </nav>
+
+          <div className="uiux-split">
+          <div className="uiux-left uiux-desktop-wheel" style={{ transform: isMobile ? "none" : "translateY(-108px)" }}>
             <OptionWheel
               items={wheelData.items}
               defaultSelected={0}
@@ -289,10 +276,10 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
               onChange={(_, item) => setActiveItem(item)}
             />
           </div>
-          <div className="uiux-right" style={{ transform: isMobile ? "none" : "translateY(-48px)" }}>
+          <div className="uiux-right">
             <AnimatedSection key={activeItem} type="slideInRight" duration={0.6}>
               {content.type === "gallery" && (
-                <div style={{ marginTop: content.offsetY }}>
+                <div className="uiux-gallery" style={{ marginTop: isMobile ? 0 : content.offsetY }}>
                   {content.images?.map((src, i) => (
                     <AnimatedSection key={src} type="fadeInUp" duration={0.7} delay={i * 0.05}>
                       <div className="relative">
@@ -305,7 +292,6 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                           unoptimized
                           className="block h-auto w-full"
                         />
-                        {content.corners && <CornerBrackets />}
                       </div>
                     </AnimatedSection>
                   ))}
@@ -317,14 +303,14 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                 content.dims &&
                 (content.centerLine ? (
                   <div
-                    className="flex items-center justify-center"
-                    style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
+                    className="uiux-media-stage flex items-center justify-center"
+                    style={{ height: isMobile ? "auto" : "calc(100vh - var(--header-height) - 6rem)" }}
                   >
                     <div
-                      className="relative"
+                      className="uiux-media-image relative"
                       style={{
-                        width: content.widthPercent ? `${content.widthPercent}%` : "100%",
-                        marginTop: content.offsetY,
+                        width: isMobile ? "100%" : content.widthPercent ? `${content.widthPercent}%` : "100%",
+                        marginTop: isMobile ? 0 : content.offsetY,
                       }}
                     >
                       <Image
@@ -346,15 +332,14 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                           </p>
                         </div>
                       )}
-                      {content.corners && <CornerBrackets />}
                     </div>
                   </div>
                 ) : (
                   <div
-                    className={`relative ${content.widthPercent ? "mx-auto" : ""}`}
+                    className={`uiux-media-image relative ${content.widthPercent ? "mx-auto" : ""}`}
                     style={{
-                      marginTop: content.offsetY,
-                      maxWidth: content.widthPercent ? `${content.widthPercent}%` : undefined,
+                      marginTop: isMobile ? 0 : content.offsetY,
+                      maxWidth: !isMobile && content.widthPercent ? `${content.widthPercent}%` : undefined,
                     }}
                   >
                     <Image
@@ -366,20 +351,19 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                       unoptimized
                       className="block h-auto w-full"
                     />
-                    {content.corners && <CornerBrackets />}
                   </div>
                 ))}
 
               {content.type === "video" && content.video && (
                 <div
-                  className="flex items-center justify-center"
-                  style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
+                  className="uiux-media-stage flex items-center justify-center"
+                  style={{ height: isMobile ? "auto" : "calc(100vh - var(--header-height) - 6rem)" }}
                 >
                   <div
-                    className="relative"
+                    className="uiux-media-image relative"
                     style={{
-                      width: content.widthPercent ? `${content.widthPercent}%` : "100%",
-                      marginTop: content.offsetY,
+                      width: isMobile ? "100%" : content.widthPercent ? `${content.widthPercent}%` : "100%",
+                      marginTop: isMobile ? 0 : content.offsetY,
                     }}
                   >
                     <video
@@ -390,18 +374,17 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
                       playsInline
                       className="block h-auto w-full"
                     />
-                    {content.corners && <CornerBrackets />}
                   </div>
                 </div>
               )}
 
               {content.type === "text" && content.text && (
                 <div
-                  className="flex items-center justify-center"
-                  style={{ height: "calc(100vh - var(--header-height) - 6rem)" }}
+                  className="uiux-text-stage flex items-center justify-center"
+                  style={{ height: isMobile ? "auto" : "calc(100vh - var(--header-height) - 6rem)" }}
                 >
                   <p
-                    className="max-w-[90vw] text-center text-[18px] leading-[1.6] text-white/85 sm:max-w-[720px] sm:text-[22px] sm:leading-[1.7]"
+                    className="uiux-background-copy max-w-[90vw] text-center text-[18px] leading-[1.6] text-white/85 sm:max-w-[720px] sm:text-[22px] sm:leading-[1.7]"
                     style={{ marginTop: isMobile ? 0 : -110 }}
                   >
                     {content.text}
@@ -414,7 +397,8 @@ export default function UiUxDetail({ project }: { project: UiUxProject }) {
               )}
             </AnimatedSection>
           </div>
-        </div>
+          </div>
+        </>
       ) : (
         <p className="text-[12px] uppercase tracking-[1.5px] text-white/35 mt-4">[Content coming soon]</p>
       )}

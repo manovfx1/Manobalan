@@ -17,31 +17,31 @@ const MODEL_ITEMS: ModelItem[] = [
   {
     image: "/images/models/models-cover-portal-gate.jpg",
     model: "/models-3d/portal-gate.glb",
-    alt: "Portal Market entrances",
+    alt: "Portal market entrance",
     anim: "rotateInLeft",
   },
   {
     image: "/images/models/models-cover-castle-gate.jpg",
     model: "/models-3d/castle-gate.glb",
-    alt: "Ancient Castle gate",
+    alt: "Ancient castle gate",
     anim: "rotateInTop",
   },
   {
     image: "/images/models/models-cover-castle-entrance.jpg",
     model: "/models-3d/castle-entrance.glb",
-    alt: "Ancient Castle entrance",
+    alt: "Ancient castle entrance",
     anim: "rotateInRight",
   },
   {
     image: "/images/models/models-cover-wooden-door.jpg",
     model: "/models-3d/wooden-door.glb",
-    alt: "Wooden Arch door",
+    alt: "Wooden arched doorway",
     anim: "rotateInTop",
   },
   {
     image: "/images/models/models-cover-six-pillars.jpg",
     model: "/models-3d/six-pillars.glb",
-    alt: "Six Pillars & Treasure",
+    alt: "Six pillars and treasure",
     anim: "rotateInLeft",
   },
   {
@@ -53,7 +53,7 @@ const MODEL_ITEMS: ModelItem[] = [
   {
     image: "/images/models/models-cover-sword-stand.jpg",
     model: "/models-3d/sword-attachment.glb",
-    alt: "Sword Attachment",
+    alt: "Sword stand",
     anim: "rotateInBottom",
   },
 ];

@@ -7,16 +7,18 @@ import AnimatedSection from "./AnimatedSection";
 const ACCENT = "#EA580C";
 
 const WHAT_I_DO = [
+  "Technical Art",
   "VR/XR Design",
-  "3D Modelling",
+  "Visual Scripting",
   "Interactive Systems",
-  "Environmental Storytelling",
-  "UI/UX Design",
   "Generative AI",
+  "Environment Art",
+  "3D Modelling",
+  "UI/UX Design",
 ];
 
 const WHAT_I_DO_DESCRIPTION =
-  "I work across the pipeline from 3D asset creation to interactive systems — building VR/XR experiences, technical art tooling, and interfaces that feel considered, tactile, and alive.";
+  "I work across the pipeline, from 3D asset creation to interactive systems, building immersive experiences, AI-driven projects, and interfaces that feel considered, tactile, and alive.";
 
 function EnginesIcon() {
   return (
@@ -82,7 +84,7 @@ interface SkillCard {
 const SKILL_CARDS: SkillCard[] = [
   { icon: EnginesIcon, label: "Engines", tools: "Unreal Engine 5 · Unity 6" },
   { icon: CubeIcon, label: "3D & Textures", tools: "Blender · Substance 3D Painter · Marvelous Designer" },
-  { icon: CodeIcon, label: "Code", tools: "Python · C# (Basic) · GitHub" },
+  { icon: CodeIcon, label: "Code", tools: "Python · GitHub" },
   { icon: DesignIcon, label: "Design", tools: "Figma · Illustrator · Photoshop" },
   { icon: MotionIcon, label: "Motion", tools: "Cinema 4D · After Effects" },
   { icon: SparkleIcon, label: "AI Tools", tools: "Generative AI Tools" },
@@ -105,7 +107,7 @@ const EXPERIENCE: ExperienceEntry[] = [
   },
   {
     title: "3D Graphics Artist",
-    company: "Freelancer - Self employed & Contract",
+    company: "Freelance and contract work",
     dates: "Oct 2023 – Dec 2025",
     description: "VFX, motion graphics, 3D animation for film/broadcast.",
   },
@@ -121,8 +123,26 @@ export default function AboutContent() {
         <div className="about-content">
           <AnimatedSection type="pageIn" duration={0.7}>
             <h1 className="text-4xl md:text-5xl font-bold mb-3 tracking-tight">Hi, I&apos;m Manobalan</h1>
-            <p className="text-[15px] leading-[1.5] text-white/70 mb-10">
-              Technical Artist &amp; UI/UX Designer | Passionate about building Immersive Digital Experiences
+            <p className="text-[15px] leading-[1.5] text-white/70 mb-3">
+              I&apos;m an aspiring technical artist and UI/UX designer, passionate about building immersive digital experiences.
+            </p>
+            <p className="mb-10 inline-flex items-center gap-2 text-[15px] font-medium text-white/70">
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                style={{ color: ACCENT }}
+              >
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              London, United Kingdom
             </p>
           </AnimatedSection>
 
